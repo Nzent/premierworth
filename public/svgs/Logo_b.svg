@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="863.112" height="988.071" viewBox="0 0 863.112 988.071">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.382" y1="0.01" x2="0.735" y2="0.988" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#7e6012"/>
+      <stop offset="0.51" stop-color="#fbbf24"/>
+      <stop offset="1" stop-color="#7e6012"/>
+    </linearGradient>
+    <filter id="Path_16" x="0" y="0" width="863.112" height="988.071" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient-2" x1="1" y1="0.5" x2="0.012" y2="0.932" xlink:href="#linear-gradient"/>
+    <filter id="building3" x="140.962" y="154.525" width="568.946" height="537.17" filterUnits="userSpaceOnUse">
+      <feOffset dx="-5" dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient-3" x1="0.08" y1="-0.075" x2="0.927" y2="0.852" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#7e6012"/>
+      <stop offset="0.502" stop-color="#fbbf24"/>
+      <stop offset="1" stop-color="#7e6012"/>
+    </linearGradient>
+    <filter id="Premier_Worth_Engineering" x="185.056" y="633.861" width="496" height="192" filterUnits="userSpaceOnUse">
+      <feOffset dx="2" dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur-3"/>
+      <feFlood flood-opacity="0.588"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Logo_b" transform="translate(-131 -102.683)">
+    <g id="Frame" transform="translate(979.112 114.683) rotate(90)">
+      <path id="Path_15" data-name="Path 15" d="M673.589,816.713H267.8a66.011,66.011,0,0,1-32.5-8.553,64.6,64.6,0,0,1-23.808-23.37L8.75,440.393a63.025,63.025,0,0,1,0-64.074l202.741-344.4A64.605,64.605,0,0,1,235.3,8.552,66.009,66.009,0,0,1,267.8,0H673.589a66.01,66.01,0,0,1,32.5,8.552,64.618,64.618,0,0,1,23.81,23.37l202.741,344.4a63.017,63.017,0,0,1,0,64.074L729.9,784.79a64.609,64.609,0,0,1-23.81,23.37A66,66,0,0,1,673.589,816.713Z" transform="translate(8.481 8.2)"/>
+      <g transform="matrix(0, -1, 1, 0, -12, 848.11)" filter="url(#Path_16)">
+        <path id="Path_16-2" data-name="Path 16" d="M276.141,16.4a57.071,57.071,0,0,0-49.089,27.829L24.31,388.626a55.084,55.084,0,0,0,0,55.861l202.742,344.4a57.068,57.068,0,0,0,49.089,27.829H681.93a57.07,57.07,0,0,0,49.089-27.829l202.742-344.4a55.088,55.088,0,0,0,0-55.861L731.019,44.229A57.071,57.071,0,0,0,681.93,16.4H276.141m0-16.4H681.93a73.642,73.642,0,0,1,63.527,36.015L948.2,380.411a71.111,71.111,0,0,1,0,72.291L745.457,797.1a73.642,73.642,0,0,1-63.527,36.014H276.141A73.643,73.643,0,0,1,212.612,797.1L9.872,452.7a71.108,71.108,0,0,1,0-72.291l202.742-344.4A73.642,73.642,0,0,1,276.141,0Z" transform="translate(848.11 12) rotate(90)" fill="url(#linear-gradient)"/>
+      </g>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 131, 102.68)" filter="url(#building3)">
+      <path id="building3-2" data-name="building3" d="M1197.331,469.1c7.594-22.709,68.484-89.659,78.208-84.725s-1.036,241.389,0,244.4,10.178,6.906,16.294,0-8.229-267.462,0-286.759,122.393-111.262,136.135-96.464,7.4,315.007,10.508,327.829,19.319,3.309,26.076,0-6.757-215.239,0-231.366,103.843,78.284,110.8,74.947,6.789-35.565,0-74.947,85.627,67.915,87.984,74.947-.914,135.127,0,140.124,31.061,4.145,32.586,0-2.488-84.732,0-87.982,33.28,16,35.846,22.811,0,136.86,0,136.86L1197.331,751.117S1189.736,491.813,1197.331,469.1Z" transform="translate(-1032.99 -79.42)" fill="url(#linear-gradient-2)"/>
+    </g>
+    <path id="base" d="M201.679,2.022c17.349,4.192,28.483,13.146,41.388,35.415l185.318,319.8c6.367,10.987,13.51,23.906,13.628,37.128.116,11.769-7.027,23.843-13.628,35.233l-185.318,319.8c-12.905,22.269-26.509,33.749-33.573,27.564-3.5-3.067-81.526-194.464-106.3-385.96C62.034,121.767,0,1.458,0,1.458S184.334-2.171,201.679,2.022Z" transform="translate(955.971 594.277) rotate(90)" fill="url(#linear-gradient-3)"/>
+    <g transform="matrix(1, 0, 0, 1, 131, 102.68)" filter="url(#Premier_Worth_Engineering)">
+      <text id="Premier_Worth_Engineering-2" data-name="Premier Worth
+Engineering" transform="translate(431.06 711.86)" font-size="69" font-family="Raleway-Medium, Raleway" font-weight="500"><tspan x="-232.978" y="0">Premier Worth</tspan><tspan x="-193.993" y="81">Engineering</tspan></text>
+    </g>
+  </g>
+</svg>
