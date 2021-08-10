@@ -12,7 +12,6 @@ export async function getStaticProps() {
 }
 
 export default function houseplans({ plans }) {
-    { plans.data ? console.log('yes') : console.log('no') }
     return (
         <>
             <section className='mt-16 mb-2'>
