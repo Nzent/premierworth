@@ -13,7 +13,7 @@ export default function navbar() {
                         {/* Left */}
                         <div className='font-extrabold'><Link href='/'><a className='hover:text-yellow-400 duration-300'>PWE</a></Link></div>
                         {/* Right */}
-                        <div className='space-x-4'>
+                        <div className='space-x-2 md:space-x-4'>
                             <Link href='/screen/houseplans'><a className='hover:border-yellow-400 duration-300 border-b-2'>Plans</a></Link>
                             <Link href='/screen/3dvisual'><a className='hover:border-yellow-400 duration-300 border-b-2'>3D</a></Link>
                             <Link href='/screen/consultant'><a className='hover:border-yellow-400 duration-300 border-b-2'>Consult</a></Link>
