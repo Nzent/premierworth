@@ -5,7 +5,11 @@ export default function homebutton({ link, title, icon }) {
         <div>
             <Link href={'/screen/' + link}>
                 <a>
-                    <div className='h-32 w-32 backdrop-filter backdrop-blur-lg border border-yellow-400 rounded-md cursor-pointer group hover:bg-yellow-400 hover:bg-opacity-20 duration-300 border-opacity-50'>
+                    <div className='h-32 w-32 backdrop-filter backdrop-blur-lg border 
+                    border-yellow-400 rounded-md cursor-pointer group hover:bg-yellow-400 
+                    hover:bg-opacity-20 duration-300 border-opacity-50
+                    bg-white bg-opacity-10'>
+                        
                         <div className='flex flex-col justify-center items-center h-full'>
                             <lord-icon
                                 src={icon}

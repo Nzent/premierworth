@@ -13,11 +13,11 @@ export async function getStaticProps() {
 export default function houseplans({ plans }) {
     return (
         <>
-            <section className='mt-2'>
+            <section className='mt-16 mb-2'>
                 <div className='container max-w-6xl m-auto'>
                     <div className="grid gap-2 grid-cols-2 md:grid-cols-4">
                         {plans.data.map((plan) => (
-                            <Link href='/' key={plan.id}>
+                            <Link href='/screen/houseplans/[id]' as={`/screen/houseplans/${plan.id}`} key={plan.id}>
                                 <a>
                                     <div className='bg-white rounded-md shadow-md hover:shadow-lg duration-300'>
                                         <Image src={`http://localhost:8055/assets/${plan.images[0].directus_files_id}`} width={420} height={280} className='rounded-t-md shadow-md' />
