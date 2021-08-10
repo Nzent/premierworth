@@ -2,10 +2,11 @@ import Image from 'next/image'
 import axios from 'axios'
 import AliceCarousel from 'react-alice-carousel';
 import "react-alice-carousel/lib/alice-carousel.css";
+import ReactShowMoreText from 'react-show-more-text';
 
 
 export async function getStaticPaths() {
-    const res = await axios.get(`${process.env.API_URL}/items/houseplans`).then(res => (res.data))
+    const res = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/items/houseplans`).then(res => (res.data))
     const paths = res.data.map(plan => {
         return {
             params: { id: plan.id.toString() }
@@ -19,7 +20,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
     const id = context.params.id
-    const data = await axios.get(`${process.env.API_URL}/items/houseplans/${id}?fields=*.*`).then(res => (res.data))
+    const data = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/items/houseplans/${id}?fields=*.*`).then(res => (res.data))
     return {
         props: { data }
     }
@@ -48,7 +49,7 @@ export default function houseplans({ data }) {
                                 items={
                                     plan.images.map((img) => (
                                         <div className='item'>
-                                            <Image src={`http://localhost:8055/assets/${img.directus_files_id}`} width={1920} height={1080} onDragStart={handleDragStart} role="presentation" className='rounded-t-md' />
+                                            <Image src={`${process.env.NEXT_PUBLIC_API_URL}/assets/${img.directus_files_id}`} width={1920} height={1080} onDragStart={handleDragStart} role="presentation" className='rounded-t-md' />
                                         </div>
                                     ))
                                 }
@@ -63,7 +64,19 @@ export default function houseplans({ data }) {
                                     <div>Story : <span className='font-bold'>{plan.story}</span></div>
                                 </div>
                                 <div className='my-2'>
-                                    <div>Description : <p className='font-bold'>{plan.description}</p></div>
+                                    <div>Description : <div>
+                                        <ReactShowMoreText
+                                            lines={3}
+                                            more={<span className='text-gray-600 italic uppercase'>More</span>}
+                                            less={<span className='text-gray-600 italic uppercase'>Less</span>}
+                                            className="content-css duration-300"
+                                            expanded={false}
+                                            width={280}
+                                            truncatedEndingComponent={"..."}
+                                        >
+                                            {plan.description}
+                                        </ReactShowMoreText>
+                                    </div></div>
                                 </div>
                                 <hr />
                             </div>
