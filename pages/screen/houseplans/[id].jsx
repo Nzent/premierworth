@@ -25,6 +25,7 @@ export async function getStaticProps(context) {
         props: { data }
     }
 }
+
 export default function houseplans({ data }) {
 
     const handleDragStart = (e) => e.preventDefault();
