@@ -29,7 +29,7 @@ const handleDragStart = (e) => e.preventDefault();
 
 
 export default function gallery({ data }) {
-   
+
     return (
         <>
             <section className='mt-16 mb-2'>
@@ -41,7 +41,7 @@ export default function gallery({ data }) {
                             infinite
                             autoWidth
                             autoPlay
-                            autoPlayInterval={3000}
+                            autoPlayInterval={2000}
                             animationDuration={1000}
                             mouseTracking
                             disableButtonsControls

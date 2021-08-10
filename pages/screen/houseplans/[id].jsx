@@ -43,7 +43,7 @@ export default function houseplans({ data }) {
                                 infinite
                                 autoWidth
                                 autoPlay
-                                autoPlayInterval={3000}
+                                autoPlayInterval={2000}
                                 animationDuration={1000}
                                 mouseTracking
                                 disableButtonsControls
