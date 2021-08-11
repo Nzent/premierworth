@@ -4,7 +4,8 @@ import Placeholdercard from '../../../components/placeholders/placeholdercard'
 
 
 export async function getStaticProps() {
-    const visuals = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/items/visual?fields=*.*&filter={ "status": { "_eq": "published" }}`).then(res => (res.data))
+    const visuals = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/items/visual?fields=*.*&filter={ "status": { "_eq": "published" }}`)
+        .then(res => (res.data))
     return {
         props: { visuals }
     }
