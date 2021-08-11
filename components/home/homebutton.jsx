@@ -20,7 +20,6 @@ export default function homebutton({ link, title, icon }) {
                             <span className='text-white -m-2 duration-300 group-hover:text-yellow-400 group-hover:opacity-100 opacity-0'>{title}</span>
                         </div>
                     </div>
-
                 </a>
             </Link>
         </div>

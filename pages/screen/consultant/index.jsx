@@ -5,7 +5,7 @@ import * as yup from "yup";
 import axios from 'axios';
 import { useRouter } from 'next/dist/client/router';
 
-export default function index() {
+export default function Index() {
 
     const router = useRouter()
 

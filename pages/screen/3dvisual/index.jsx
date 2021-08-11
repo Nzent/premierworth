@@ -39,9 +39,7 @@ export default function houseplans({ visuals }) {
                                                 >
                                                     {visual.description}
                                                 </ReactShowMoreText>
-
                                             </div>
-
                                         </div>
                                     </div>
                                 ))}

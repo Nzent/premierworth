@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       backgroundImage: theme => ({
         'bgimage': "url('/images/img3.jpg')",
+        'bgerror': "url('/images/error.webp')",
        })
     },
   },

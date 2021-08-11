@@ -1,7 +1,7 @@
 import React from 'react'
 import { useRouter } from 'next/dist/client/router'
 import Link from 'next/link'
-export default function navbar() {
+export default function Navbar() {
     const router = useRouter()
 
 

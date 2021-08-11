@@ -14,7 +14,7 @@ export async function getStaticProps() {
     }
 }
 
-export default function index({ gallery }) {
+export default function Index({ gallery }) {
     return (
         <>
 
@@ -26,11 +26,16 @@ export default function index({ gallery }) {
                             <>
                                 {
                                     gallery.data.map(gallery => (
-                                        <Link href="/screen/gallery/[id]" as={`/screen/gallery/${gallery.id}`}>
-                                            <div className='bg-white rounded-md p-1' key={gallery.id}>
-                                                <Image src={`${process.env.NEXT_PUBLIC_API_URL}/assets/${gallery.images[0].directus_files_id}`} width={420} height={280} layout='responsive' className='rounded-md shadow-md hover:shadow-lg duration-300 cursor-pointer' />
-                                            </div>
-                                        </Link>
+                                        <div key={gallery.id}>
+                                            <Link href="/screen/gallery/[id]" as={`/screen/gallery/${gallery.id}`}>
+                                                <a>
+                                                    <div className='bg-white rounded-md p-1' key={gallery.id}>
+                                                        <Image src={`${process.env.NEXT_PUBLIC_API_URL}/assets/${gallery.images[0].directus_files_id}`} width={420} height={280} layout='responsive' className='rounded-md shadow-md hover:shadow-lg duration-300 cursor-pointer'
+                                                            alt={gallery.title} />
+                                                    </div>
+                                                </a>
+                                            </Link>
+                                        </div>
                                     ))
                                 }
                             </>

@@ -21,7 +21,7 @@ export default function index({ pagedata, members }) {
             <section className='mt-16 mb-2'>
                 <div className='container max-w-6xl m-auto'>
                     <div>
-                        <Image src={`${process.env.NEXT_PUBLIC_API_URL}/assets/${data.about_image}`} width={1920} height={1080} layout='responsive' className='rounded-t-md' />
+                        <Image src={`${process.env.NEXT_PUBLIC_API_URL}/assets/${data.about_image}`} width={1920} height={1080} layout='responsive' className='rounded-t-md' alt={data.website_name}/>
                     </div>
                     <div className='bg-white rounded-b-md p-2 text-center shadow-md'>
                         <div className='my-2'>
@@ -56,10 +56,10 @@ export default function index({ pagedata, members }) {
 
                     <div className='grid grid-cols-3 gap-2  mt-2'>
                         {memberdata.map(member => (
-                            <div className='bg-white p-2 rounded-md shadow-md text-center space-y-2'>
+                            <div className='bg-white p-2 rounded-md shadow-md text-center space-y-2' key={member.id}>
                                 <div>
                                     <Image src={`${process.env.NEXT_PUBLIC_API_URL}/assets/${member.avatar}`} width={200} height={200}
-                                        className='rounded-full shadow-md m-2' />
+                                        className='rounded-full shadow-md m-2' alt={member.name} />
                                 </div>
                                 <div className='italic font-bold'>{member.name}</div>
                                 <div className='italic text-gray-500'>{member.profession}</div>

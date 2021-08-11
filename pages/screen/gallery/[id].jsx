@@ -47,8 +47,8 @@ export default function gallery({ data }) {
                             disableButtonsControls
                             items={
                                 data.data.images.map((img) => (
-                                    <div className='item'>
-                                        <Image src={`${process.env.NEXT_PUBLIC_API_URL}/assets/${img.directus_files_id}`} width={1920} height={1080} onDragStart={handleDragStart} role="presentation" className='rounded-t-md' />
+                                    <div className='item' key={img.id}>
+                                        <Image src={`${process.env.NEXT_PUBLIC_API_URL}/assets/${img.directus_files_id}`} width={1920} height={1080} onDragStart={handleDragStart} role="presentation" className='rounded-t-md' alt={img.title} />
                                     </div>
                                 ))
                             }

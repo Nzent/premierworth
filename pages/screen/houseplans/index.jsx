@@ -24,8 +24,9 @@ export default function houseplans({ plans }) {
                                     <Link Link href='/screen/houseplans/[id]' as={`/screen/houseplans/${plan.id}`} key={plan.id}>
                                         <a>
                                             <div className='bg-white rounded-md shadow-md hover:shadow-lg duration-300'>
-                                                <Image src={`${process.env.NEXT_PUBLIC_API_URL}/assets/${plan.images[0].directus_files_id}`} width={420} height={280} className='rounded-t-md shadow-md' />
+                                                <Image src={`${process.env.NEXT_PUBLIC_API_URL}/assets/${plan.images[0].directus_files_id}`} width={420} height={280} className='rounded-t-md shadow-md' alt={plan.title} />
                                                 <div className='p-2'>
+                                                    <div className='text-xl font-bold pb-2'>{plan.title}</div>
                                                     <div className='grid grid-cols-2 md:grid-cols-3 gap-2'>
                                                         <div>Area : <span className='font-bold'>{plan.area}</span></div>
                                                         <div>Beds : <span className='font-bold'>{plan.beds}</span></div>

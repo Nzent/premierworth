@@ -49,13 +49,12 @@ export default function houseplans({ data }) {
                                 disableButtonsControls
                                 items={
                                     plan.images.map((img) => (
-                                        <div className='item'>
-                                            <Image src={`${process.env.NEXT_PUBLIC_API_URL}/assets/${img.directus_files_id}`} width={1920} height={1080} onDragStart={handleDragStart} role="presentation" className='rounded-t-md' />
+                                        <div className='item' key={img.id}>
+                                            <Image src={`${process.env.NEXT_PUBLIC_API_URL}/assets/${img.directus_files_id}`} width={1920} height={1080} onDragStart={handleDragStart} role="presentation" className='rounded-t-md' alt={img.id} />
                                         </div>
                                     ))
                                 }
                             />
-
                             <div className='p-2'>
                                 <div className='grid grid-cols-2 md:grid-cols-3 gap-2'>
                                     <div>Area : <span className='font-bold'>{plan.area}</span></div>
@@ -109,10 +108,6 @@ export default function houseplans({ data }) {
                                     </div>
                                 </div>
                             </div>
-
-
-
-
                         </div>
                     </div>
                 </div>
