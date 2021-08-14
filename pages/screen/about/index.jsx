@@ -40,7 +40,7 @@ export default function index({ pagedata, members }) {
                         <div className='my-2'>
                             <span className='text-xl font-bold'> Location </span>
                             <br />
-                            <iframe src={data.location_src} className='w-full h-80 rounded-md border border-gray-400 border-opacity-50' allowFullScreen='true' loading="lazy"></iframe>
+                            <iframe src={data.location_src} className='w-full h-80 rounded-md border border-gray-400 border-opacity-50' allowFullScreen={true} loading="lazy"></iframe>
                         </div>
                         <div className='mt-2'>
                             <span className='text-xl font-bold'> Contacts </span>
