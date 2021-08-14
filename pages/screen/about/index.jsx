@@ -3,7 +3,7 @@ import Image from 'next/image'
 import React from 'react'
 
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const pagedata = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/items/pagedata?filter={ "status": { "_eq": "published" }}`).then(res => (res.data))
     const members = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/items/members?filter={ "status": { "_eq": "published" }}`).then(res => (res.data))
     return {

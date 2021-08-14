@@ -3,7 +3,7 @@ import Head from 'next/head'
 import HomeButton from '../components/home/homebutton'
 
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const name = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/items/pagedata?fields=website_name`)
     .then(res => (res.data))
   return {

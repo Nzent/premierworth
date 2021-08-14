@@ -6,7 +6,7 @@ import Placeholdercard from '../../../components/placeholders/placeholdercard'
 
 
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const gallery = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/items/gallery?fields=*.*&filter={ "status": { "_eq": "published" }}`).then(res => (res.data))
 
     return {
@@ -17,7 +17,6 @@ export async function getStaticProps() {
 export default function Index({ gallery }) {
     return (
         <>
-
             <section className='mt-16 mb-2'>
                 <div className='container max-w-6xl m-auto'>
                     <div className="grid gap-2 grid-cols-1 md:grid-cols-2">

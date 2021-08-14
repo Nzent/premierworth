@@ -4,7 +4,7 @@ import axios from 'axios'
 import Placeholdercard from '../../../components/placeholders/placeholdercard'
 
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const plans = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/items/houseplans?fields=*.*&filter={ "status": { "_eq": "published" }}`).then(res => (res.data))
     return {
         props: { plans }

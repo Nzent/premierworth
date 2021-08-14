@@ -4,20 +4,7 @@ import React from 'react'
 import AliceCarousel from 'react-alice-carousel'
 import "react-alice-carousel/lib/alice-carousel.css";
 
-export async function getStaticPaths() {
-    const res = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/items/gallery`).then(res => (res.data))
-    const paths = res.data.map(plan => {
-        return {
-            params: { id: plan.id.toString() }
-        }
-    })
-    return {
-        paths,
-        fallback: false
-    }
-}
-
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
     const id = context.params.id
     const data = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/items/gallery/${id}?fields=*.*&filter={ "status": { "_eq": "published" }}`).then(res => (res.data))
     return {

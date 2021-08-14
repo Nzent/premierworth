@@ -5,20 +5,7 @@ import "react-alice-carousel/lib/alice-carousel.css";
 import ReactShowMoreText from 'react-show-more-text';
 
 
-export async function getStaticPaths() {
-    const res = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/items/houseplans`).then(res => (res.data))
-    const paths = res.data.map(plan => {
-        return {
-            params: { id: plan.id.toString() }
-        }
-    })
-    return {
-        paths,
-        fallback: false
-    }
-}
-
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
     const id = context.params.id
     const data = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/items/houseplans/${id}?fields=*.*`).then(res => (res.data))
     return {

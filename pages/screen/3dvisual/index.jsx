@@ -3,7 +3,7 @@ import ReactShowMoreText from 'react-show-more-text'
 import Placeholdercard from '../../../components/placeholders/placeholdercard'
 
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const visuals = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/items/visual?fields=*.*&filter={ "status": { "_eq": "published" }}`)
         .then(res => (res.data))
     return {
