@@ -18,14 +18,14 @@ export default function index({ pagedata, members }) {
     const memberdata = members.data
     return (
         <>
-            <section className='mt-16 mb-2'>
+            <section className='mt-16 m-2'>
                 <div className='container max-w-6xl m-auto'>
                     <div>
-                        <Image src={`${process.env.NEXT_PUBLIC_API_URL}/assets/${data.about_image}`} width={1920} height={1080} layout='responsive' className='rounded-t-md' alt={data.website_name}/>
+                        <Image src={`${process.env.NEXT_PUBLIC_API_URL}/assets/${data.about_image}`} width={1920} height={1080} layout='responsive' className='rounded-t-md' alt={data.website_name} />
                     </div>
                     <div className='bg-white rounded-b-md p-2 text-center shadow-md'>
                         <div className='my-2'>
-                            <div className='text-4xl text-yellow-400'>{data.website_name}</div>
+                            <div className='text-2xl md:text-4xl text-yellow-400'>{data.website_name}</div>
                         </div>
                         <div className='my-2'>
                             <span className='text-xl font-bold'> About us </span>
@@ -45,7 +45,7 @@ export default function index({ pagedata, members }) {
                         <div className='mt-2'>
                             <span className='text-xl font-bold'> Contacts </span>
                             <br />
-                            <div className='grid grid-cols-2 gap-2'>
+                            <div className='grid grid-cols-1 md:grid-cols-2 gap-2'>
                                 <div className='bg-gray-200 rounded-md h-20 flex justify-center items-center'>{data.contacts}</div>
                                 <div className='bg-gray-200 rounded-md h-20 flex justify-center items-center'>{data.contact_whatsapp}</div>
                             </div>
@@ -53,8 +53,10 @@ export default function index({ pagedata, members }) {
                     </div>
 
                     {/* Members */}
-
-                    <div className='grid grid-cols-3 gap-2  mt-2'>
+                    <div className='mx-auto my-2 text-xl font-bold bg-white shadow-md rounded-md flex justify-center'>
+                        <h1>Members</h1>
+                    </div>
+                    <div className='grid grid-cols-2 md:grid-cols-3 gap-2  mt-2'>
                         {memberdata.map(member => (
                             <div className='bg-white p-2 rounded-md shadow-md text-center space-y-2' key={member.id}>
                                 <div>

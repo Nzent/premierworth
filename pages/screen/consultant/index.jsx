@@ -36,7 +36,7 @@ export default function Index() {
 
     return (
         <>
-            <section className='mt-16 mb-2 relative'>
+            <section className='mt-16 mb-2 relative m-2'>
                 <div className='container max-w-2xl m-auto'>
                     <div className='bg-white shadow-md p-4 rounded-md'>
                         {/* Form */}

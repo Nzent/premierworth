@@ -16,7 +16,7 @@ export default function houseplans({ plans }) {
         <>
             <section className='mt-16 mb-2'>
                 <div className='container max-w-6xl m-auto'>
-                    <div className="grid gap-2 grid-cols-2 md:grid-cols-4">
+                    <div className="grid gap-2 grid-cols-1 md:grid-cols-4 m-2">
                         {plans.data.length === 0 ? <Placeholdercard />
                             :
                             <>

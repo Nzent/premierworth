@@ -17,7 +17,7 @@ export async function getServerSideProps() {
 export default function Index({ gallery }) {
     return (
         <>
-            <section className='mt-16 mb-2'>
+            <section className='mt-16 m-2 '>
                 <div className='container max-w-6xl m-auto'>
                     <div className="grid gap-2 grid-cols-1 md:grid-cols-2">
                         {gallery.data.length === 0 ? <Placeholdercard />

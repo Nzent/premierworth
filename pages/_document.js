@@ -17,7 +17,7 @@ class MyDocument extends Document {
                     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ffc40d" />
                     <meta name="msapplication-TileColor" content="#ffc40d" />
                     <meta name="theme-color" content="#ffffff" />
-                    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+                    <link rel="preconnect" href="https://fonts.googleapis.com" />
                     <link rel="dns-prefetch" href="https://fonts.gstatic.com" crossOrigin='true' />
                     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;600&display=swap" rel="stylesheet" />
                     <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js" defer></script>

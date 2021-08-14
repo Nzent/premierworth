@@ -14,11 +14,12 @@ export default function Navbar() {
                         <div className='font-extrabold'><Link href='/'><a className='hover:text-yellow-400 duration-300'>PWE</a></Link></div>
                         {/* Right */}
                         <div className='space-x-2 md:space-x-4'>
-                            <Link href='/screen/houseplans'><a className='hover:border-yellow-400 duration-300 border-b-2'>Plans</a></Link>
-                            <Link href='/screen/3dvisual'><a className='hover:border-yellow-400 duration-300 border-b-2'>3D</a></Link>
-                            <Link href='/screen/consultant'><a className='hover:border-yellow-400 duration-300 border-b-2'>Consult</a></Link>
-                            <Link href='/screen/gallery'><a className='hover:border-yellow-400 duration-300 border-b-2'>Gallery</a></Link>
-                            <Link href='/screen/about'><a className='hover:border-yellow-400 duration-300 border-b-2'>About</a></Link>
+                            <Link href='/screen/houseplans'><a className='hover:border-yellow-400 duration-300 border-b-2'>
+                                {router.pathname==='/screen/houseplans'?<span className='text-yellow-400 font-bold'>Plans</span>:<span>Plans</span>}</a></Link>
+                            <Link href='/screen/3dvisual'><a className='hover:border-yellow-400 duration-300 border-b-2'>{router.pathname==='/screen/3dvisual'?<span className='text-yellow-400 font-bold'>3D</span>:<span>3D</span>}</a></Link>
+                            <Link href='/screen/consultant'><a className='hover:border-yellow-400 duration-300 border-b-2'>{router.pathname==='/screen/consultant'?<span className='text-yellow-400 font-bold'>Consultant</span>:<span>Consultant</span>}</a></Link>
+                            <Link href='/screen/gallery'><a className='hover:border-yellow-400 duration-300 border-b-2'>{router.pathname==='/screen/gallery'?<span className='text-yellow-400 font-bold'>Gallery</span>:<span>Gallery</span>}</a></Link>
+                            <Link href='/screen/about'><a className='hover:border-yellow-400 duration-300 border-b-2'>{router.pathname==='/screen/about'?<span className='text-yellow-400 font-bold'>About</span>:<span>About</span>}</a></Link>
                         </div>
                     </div>
                 </nav>
