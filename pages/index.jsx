@@ -17,7 +17,7 @@ export default function Home({ name }) {
     <>
       <Head>
         <title>{name.data[0].website_name}</title>
-        <meta name="description" content={name.data[0].website_name} />
+        <meta name="description" content={name.data[0].about_website} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -27,7 +27,7 @@ export default function Home({ name }) {
           <div className='h-screen w-full fixed z-10'>
             <div className='flex flex-col justify-center items-center h-full'>
               <h1 className='text-center text-5xl md:text-6xl font-light text-yellow-400'>{name.data[0].website_name}</h1>
-              <div className='grid grid-cols-2 md:grid-cols-5 gap-2 mt-4'>
+              <div className='grid grid-cols-1 md:grid-cols-5 gap-2 mt-4'>
                 <HomeButton link='houseplans' title='House plans' icon="https://cdn.lordicon.com/gmzxduhd.json" />
                 <HomeButton link='3dvisual' title='3D Visual' icon="https://cdn.lordicon.com/ijznovhy.json" />
                 <HomeButton link='consultant' title='Consultant' icon="https://cdn.lordicon.com/zpxybbhl.json" />
