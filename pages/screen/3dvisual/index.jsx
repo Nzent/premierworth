@@ -9,6 +9,7 @@ export default function houseplans() {
     if (isError) return (<div>Error</div>)
     if (isLoading) return (<div>Error</div>)
     const visuals = data
+
     return (
         <>
             <section className='mt-16 mb-2 m-2'>
@@ -20,7 +21,7 @@ export default function houseplans() {
                                 {visuals.data.map((visual) => (
                                     <div className='bg-white rounded-md shadow-md hover:shadow-lg duration-300 cursor-pointer' key={visual.id}>
                                         <video controls disablePictureInPicture controlsList='nodownload' className='rounded-t-md'>
-                                            <source src={`${process.env.NEXT_PUBLIC_API_URL}/assets/${visual.video.filename_disk}`} />
+                                            <source src={`${process.env.NEXT_PUBLIC_API_URL}/assets/${visual.video}`} />
                                         </video>
                                         <div className='p-2'>
                                             <div className='text-xl font-bold'>{visual.title}</div>
