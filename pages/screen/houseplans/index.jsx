@@ -2,16 +2,17 @@ import Image from 'next/image'
 import Link from 'next/link'
 import axios from 'axios'
 import Placeholdercard from '../../../components/placeholders/placeholdercard'
+import useDataFetch from '../../../components/fetch'
 
 
-export async function getServerSideProps() {
-    const plans = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/items/houseplans?fields=*.*&filter={ "status": { "_eq": "published" }}`).then(res => (res.data))
-    return {
-        props: { plans }
-    }
-}
+export default function houseplans() {
 
-export default function houseplans({ plans }) {
+    const { data, isLoading, isError } = useDataFetch(`items/houseplans?fields=*.*&filter[status][_eq]=published`)
+
+    if (isLoading) return (<div>Loading ... </div>)
+    if (isError) return (<div>Error</div>)
+    const plans = data
+
     return (
         <>
             <section className='mt-16 mb-2'>
@@ -28,11 +29,11 @@ export default function houseplans({ plans }) {
                                                 <div className='p-2'>
                                                     <div className='text-xl font-bold pb-2'>{plan.title}</div>
                                                     <div className='grid grid-cols-2 md:grid-cols-3 gap-2'>
-                                                        <div>Area : <span className='font-bold'>{plan.area}</span></div>
-                                                        <div>Beds : <span className='font-bold'>{plan.beds}</span></div>
-                                                        <div>Bath : <span className='font-bold'>{plan.baths}</span></div>
-                                                        <div>Garage : <span className='font-bold'>{plan.garage}</span></div>
-                                                        <div>Story : <span className='font-bold'>{plan.story}</span></div>
+                                                        <div className='  whitespace-nowrap overflow-hidden'>Area : <span className='font-bold'>{plan.area}</span></div>
+                                                        <div className=' whitespace-nowrap overflow-hidden'>Beds : <span className='font-bold' >{plan.beds}</span></div>
+                                                        <div className='  whitespace-nowrap overflow-hidden'>Bath : <span className='font-bold'>{plan.baths}</span></div>
+                                                        <div className='  whitespace-nowrap overflow-hidden'>Garage : <span className='font-bold'>{plan.garage}</span></div>
+                                                        <div className='  whitespace-nowrap overflow-hidden'>Story : <span className='font-bold'>{plan.story}</span></div>
                                                     </div>
                                                     <hr />
                                                     <div className='mt-2 text-center md:text-right'>Rs. <span className='font-bold text-2xl text-gray-500'>{plan.price}</span></div>

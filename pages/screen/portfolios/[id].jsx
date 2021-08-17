@@ -1,21 +1,22 @@
 import axios from 'axios'
+import { useRouter } from 'next/dist/client/router';
 import Image from 'next/image'
 import React from 'react'
 import AliceCarousel from 'react-alice-carousel'
 import "react-alice-carousel/lib/alice-carousel.css";
-
-export async function getServerSideProps(context) {
-    const id = context.params.id
-    const data = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/items/gallery/${id}?fields=*.*&filter={ "status": { "_eq": "published" }}`).then(res => (res.data))
-    return {
-        props: { data }
-    }
-}
+import useDataFetch from '../../../components/fetch';
 
 const handleDragStart = (e) => e.preventDefault();
 
+export default function gallery() {
 
-export default function gallery({ data }) {
+    const route = useRouter()
+    const id = route.query.id
+    const { data, isLoading, isError } = useDataFetch(`items/gallery/${id}?fields=*.*&filter=[status][_eq]=published`)
+
+    if (isLoading) return (<div>Loading ... </div>)
+    if (isError) return (<div>Error</div>)
+
 
     return (
         <>

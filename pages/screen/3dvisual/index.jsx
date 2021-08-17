@@ -11,6 +11,7 @@ export async function getServerSideProps() {
     }
 }
 
+
 export default function houseplans({ visuals }) {
     return (
         <>

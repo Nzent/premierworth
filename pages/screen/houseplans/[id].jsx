@@ -1,19 +1,17 @@
 import Image from 'next/image'
-import axios from 'axios'
 import AliceCarousel from 'react-alice-carousel';
 import "react-alice-carousel/lib/alice-carousel.css";
 import ReactShowMoreText from 'react-show-more-text';
+import { useRouter } from 'next/dist/client/router';
+import useDataFetch from '../../../components/fetch';
 
+export default function houseplans() {
+    const route = useRouter()
+    const id = route.query.id
+    const { data, isLoading, isError } = useDataFetch(`items/houseplans/${id}?fields=*.*`)
 
-export async function getServerSideProps(context) {
-    const id = context.params.id
-    const data = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/items/houseplans/${id}?fields=*.*`).then(res => (res.data))
-    return {
-        props: { data }
-    }
-}
-
-export default function houseplans({ data }) {
+    if (isLoading) return (<div>Loading ... </div>)
+    if (isError) return (<div>Error</div>)
 
     const handleDragStart = (e) => e.preventDefault();
 
