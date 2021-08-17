@@ -1,4 +1,3 @@
-import axios from 'axios'
 import { useRouter } from 'next/dist/client/router';
 import Image from 'next/image'
 import React from 'react'

@@ -1,18 +1,14 @@
-import axios from 'axios'
 import ReactShowMoreText from 'react-show-more-text'
+import useDataFetch from '../../../components/fetch'
 import Placeholdercard from '../../../components/placeholders/placeholdercard'
 
 
-export async function getServerSideProps() {
-    const visuals = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/items/visual?fields=*.*&filter={ "status": { "_eq": "published" }}`)
-        .then(res => (res.data))
-    return {
-        props: { visuals }
-    }
-}
+export default function houseplans() {
+    const { data, isLoading, isError } = useDataFetch("items/visual?filter[status][_eq]=published")
 
-
-export default function houseplans({ visuals }) {
+    if (isError) return (<div>Error</div>)
+    if (isLoading) return (<div>Error</div>)
+    const visuals = data
     return (
         <>
             <section className='mt-16 mb-2 m-2'>

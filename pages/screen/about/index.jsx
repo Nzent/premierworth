@@ -1,11 +1,9 @@
-// import axios from 'axios'
 import Image from 'next/image'
 import React from 'react'
 import useDataFetch from '../../../components/fetch'
 
 export default function index() {
     const { data, isLoading, isError } = useDataFetch("items/pagedata?filter[status][_eq]=published")
-    
     const { data:mdata, isLoading:mdataL, isError:mdataE } = useDataFetch("items/members?filter[status][_eq]=published")
 
     
