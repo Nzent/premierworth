@@ -1,5 +1,5 @@
 import Link from 'next/link'
-export default function Custom404() {
+export default function Custom403() {
   return (
     <>
       <section className='h-screen w-full bg-bgerror relative'>

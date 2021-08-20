@@ -7,15 +7,16 @@ export default function Navbar() {
 
     const { data, isLoading, isError } = useDataFetch('items/pagedata?fields=website_name')
 
-    if (isLoading) return (<div>Loading ... </div>)
-    if (isError) return (name = 'PWE')
-
     var name = data.data[0].website_name
+
+    if (isLoading) return (<div>Loading ... </div>)
+    if (isError) return (name = 'Web Name')
+
     var matches = name.match(/\b(\w)/g);
 
     return (
         <>
-            {router.pathname === '/' ? null :
+            {router.pathname === '/' ? <></> :
                 <nav className='p-4 bg-white shadow-md rounded-b-md fixed top-0 z-20 w-full'>
                     <div className='max-w-6xl mx-auto flex justify-between'>
                         {/* Left */}

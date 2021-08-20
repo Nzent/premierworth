@@ -4,7 +4,7 @@ import Placeholdercard from '../../../components/placeholders/placeholdercard'
 import useDataFetch from '../../../components/fetch'
 
 
-export default function houseplans() {
+export default function Houseplans() {
 
     const { data, isLoading, isError } = useDataFetch(`items/houseplans?fields=*.*&filter[status][_eq]=published`)
 
@@ -23,7 +23,7 @@ export default function houseplans() {
                                 {plans.data.map((plan) => (
                                     <Link Link href='/screen/houseplans/[id]' as={`/screen/houseplans/${plan.id}`} key={plan.id}>
                                         <a>
-                                            <div className='bg-white rounded-md shadow-md hover:shadow-lg duration-300'>
+                                            <div className='bg-white rounded-md shadow-md hover:border-2 hover:border-yellow-400 hover:border-opacity-80 duration-300'>
                                                 <Image src={`${process.env.NEXT_PUBLIC_API_URL}/assets/${plan.images[0].directus_files_id}`} width={420} height={280} className='rounded-t-md shadow-md' alt={plan.title} />
                                                 <div className='p-2'>
                                                     <div className='text-xl font-bold pb-2'>{plan.title}</div>
@@ -45,6 +45,7 @@ export default function houseplans() {
                     </div>
                 </div>
             </section>
+            <section className='h-screen'></section>
         </>
     )
 }

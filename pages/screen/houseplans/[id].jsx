@@ -5,7 +5,7 @@ import ReactShowMoreText from 'react-show-more-text';
 import { useRouter } from 'next/dist/client/router';
 import useDataFetch from '../../../components/fetch';
 
-export default function houseplans() {
+export default function Houseplans() {
     const route = useRouter()
     const id = route.query.id
     const { data, isLoading, isError } = useDataFetch(`items/houseplans/${id}?fields=*.*`)

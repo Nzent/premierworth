@@ -6,7 +6,11 @@ import { motion, AnimatePresence } from 'framer-motion'
 function MyApp({ Component, pageProps, router }) {
   const variants = {
     hidden: { opacity: 0 },
-    enter: { opacity: 1 },
+    enter: {
+      opacity: 1, transition: {
+        duration: 0.5,
+      }
+    },
     exit: { opacity: 0 },
   }
   return (
@@ -18,8 +22,7 @@ function MyApp({ Component, pageProps, router }) {
           initial="hidden"
           animate="enter"
           exit="exit"
-          transition={{ type: 'spring' }}
-        >
+          transition={{ type: 'spring' }}>
           <NextNProgress
             color="#fbbf24"
             startPosition={0.1}

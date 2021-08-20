@@ -3,7 +3,7 @@ import useDataFetch from '../../../components/fetch'
 import Placeholdercard from '../../../components/placeholders/placeholdercard'
 
 
-export default function houseplans() {
+export default function Houseplans() {
     const { data, isLoading, isError } = useDataFetch("items/visual?filter[status][_eq]=published")
 
     if (isError) return (<div>Error</div>)

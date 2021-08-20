@@ -8,7 +8,7 @@ class MyDocument extends Document {
 
     render() {
         return (
-            <Html className='bg-gray-200' lang='en'>
+            <Html className='bg-gray-200 bg-bgimage1 bg-no-repeat bg-fixed h-full ' lang='en'>
                 <Head>
                     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
                     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -18,7 +18,7 @@ class MyDocument extends Document {
                     <meta name="msapplication-TileColor" content="#ffc40d" />
                     <meta name="theme-color" content="#ffffff" />
                     <link rel="preconnect" href="https://fonts.googleapis.com" />
-                    <link rel="dns-prefetch" href="https://fonts.gstatic.com" crossOrigin='true' />
+                    <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='true' />
                     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;600&display=swap" rel="stylesheet" />
                     <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js" defer></script>
                 </Head>

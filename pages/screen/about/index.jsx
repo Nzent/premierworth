@@ -2,7 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 import useDataFetch from '../../../components/fetch'
 
-export default function index() {
+export default function Index() {
     const { data, isLoading, isError } = useDataFetch("items/pagedata?filter[status][_eq]=published")
     const { data:mdata, isLoading:mdataL, isError:mdataE } = useDataFetch("items/members?filter[status][_eq]=published")
 
@@ -53,7 +53,7 @@ export default function index() {
                         </>
                     }
                     {/* Members */}
-                    <div className='mx-auto my-2 text-xl font-bold bg-white shadow-md rounded-md flex justify-center'>
+                    <div className='mx-auto my-2 text-xl py-4 font-bold bg-white shadow-md rounded-md flex justify-center'>
                         <h1>Members</h1>
                     </div>
                     <div className='grid grid-cols-2 md:grid-cols-3 gap-2  mt-2'>

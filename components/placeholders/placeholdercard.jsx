@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function placeholdercard() {
+export default function Placeholdercard() {
     return (
         <div>
             <div className='bg-white rounded-md shadow-md p-4 w-full h-full'>

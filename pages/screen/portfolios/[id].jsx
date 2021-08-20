@@ -7,7 +7,7 @@ import useDataFetch from '../../../components/fetch';
 
 const handleDragStart = (e) => e.preventDefault();
 
-export default function gallery() {
+export default function Gallery() {
 
     const route = useRouter()
     const id = route.query.id
